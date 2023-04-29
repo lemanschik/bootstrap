@@ -407,7 +407,7 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // You can add more entries to the $spacers map, should you need more variation.
 
 // scss-docs-start spacer-variables-maps
-$spacer: 1rem !default;
+$spacer: 1vmin !default;
 $spacers: (
   0: 0,
   1: $spacer * .25,
@@ -461,7 +461,7 @@ $stretched-link-z-index:                  1 !default;
 
 // Icon links
 // scss-docs-start icon-link-variables
-$icon-link-gap:               .375rem !default;
+$icon-link-gap:               .375vmin !default;
 $icon-link-underline-offset:  .25em !default;
 $icon-link-icon-size:         1em !default;
 $icon-link-icon-transition:   .2s ease-in-out transform !default;
@@ -472,7 +472,7 @@ $icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom:   1vmin !default;
 
 
 // Grid breakpoints
@@ -499,17 +499,17 @@ $grid-breakpoints: (
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-// scss-docs-start container-max-widths
-$container-max-widths: (
+// scss-docs-start container-min-widths
+$container-min-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1140px,
   xxl: 1320px
 ) !default;
-// scss-docs-end container-max-widths
+// scss-docs-end container-min-widths
 
-@include _assert-ascending($container-max-widths, "$container-max-widths");
+@include _assert-ascending($container-min-widths, "$container-min-widths");
 
 
 // Grid columns
@@ -517,7 +517,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           1.5rem !default;
+$grid-gutter-width:           1.5vmin !default;
 $grid-row-columns:            6 !default;
 
 // Container padding
@@ -544,21 +544,21 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
-$border-radius-sm:            .25rem !default;
-$border-radius-lg:            .5rem !default;
-$border-radius-xl:            1rem !default;
-$border-radius-xxl:           2rem !default;
-$border-radius-pill:          50rem !default;
+$border-radius:               .375vmin !default;
+$border-radius-sm:            .25vmin !default;
+$border-radius-lg:            .5vmin !default;
+$border-radius-xl:            1vmin !default;
+$border-radius-xxl:           2vmin !default;
+$border-radius-pill:          50vmin !default;
 // scss-docs-end border-radius-variables
 // fusv-disable
 $border-radius-2xl:           $border-radius-xxl !default; // Deprecated in v5.3.0
 // fusv-enable
 
 // scss-docs-start box-shadow-variables
-$box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
-$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
+$box-shadow:                  0 .5vmin 1vmin rgba($black, .15) !default;
+$box-shadow-sm:               0 .125vmin .25vmin rgba($black, .075) !default;
+$box-shadow-lg:               0 1vmin 3vmin rgba($black, .175) !default;
 $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
 // scss-docs-end box-shadow-variables
 
@@ -566,7 +566,7 @@ $component-active-color:      $white !default;
 $component-active-bg:         $primary !default;
 
 // scss-docs-start focus-ring-variables
-$focus-ring-width:      .25rem !default;
+$focus-ring-width:      .25vmin !default;
 $focus-ring-opacity:    .25 !default;
 $focus-ring-color:      rgba($primary, $focus-ring-opacity) !default;
 $focus-ring-blur:       0 !default;
@@ -612,7 +612,7 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
 $font-size-root:              null !default;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              1vmin !default; // Assumes the browser default, typically `16px`
 $font-size-sm:                $font-size-base * .875 !default;
 $font-size-lg:                $font-size-base * 1.25 !default;
 
@@ -705,13 +705,13 @@ $hr-border-color:             null !default; // Allows for inherited colors
 $hr-border-width:             var(--#{$prefix}border-width) !default;
 $hr-opacity:                  .25 !default;
 
-$legend-margin-bottom:        .5rem !default;
-$legend-font-size:            1.5rem !default;
+$legend-margin-bottom:        .5vmin !default;
+$legend-font-size:            1.5vmin !default;
 $legend-font-weight:          null !default;
 
 $dt-font-weight:              $font-weight-bold !default;
 
-$list-inline-padding:         .5rem !default;
+$list-inline-padding:         .5vmin !default;
 
 $mark-padding:                .1875em !default;
 $mark-bg:                     $yellow-100 !default;
@@ -723,10 +723,10 @@ $mark-bg:                     $yellow-100 !default;
 // Customizes the `.table` component with basic values, each used across all table variations.
 
 // scss-docs-start table-variables
-$table-cell-padding-y:        .5rem !default;
-$table-cell-padding-x:        .5rem !default;
-$table-cell-padding-y-sm:     .25rem !default;
-$table-cell-padding-x-sm:     .25rem !default;
+$table-cell-padding-y:        .5vmin !default;
+$table-cell-padding-x:        .5vmin !default;
+$table-cell-padding-y-sm:     .25vmin !default;
+$table-cell-padding-x-sm:     .25vmin !default;
 
 $table-cell-vertical-align:   top !default;
 
@@ -781,8 +781,8 @@ $table-variants: (
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
+$input-btn-padding-y:         .375vmin !default;
+$input-btn-padding-x:         .75vmin !default;
 $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
@@ -793,12 +793,12 @@ $input-btn-focus-color:         $focus-ring-color !default;
 $input-btn-focus-blur:          $focus-ring-blur !default;
 $input-btn-focus-box-shadow:    $focus-ring-box-shadow !default;
 
-$input-btn-padding-y-sm:      .25rem !default;
-$input-btn-padding-x-sm:      .5rem !default;
+$input-btn-padding-y-sm:      .25vmin !default;
+$input-btn-padding-x-sm:      .5vmin !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 
-$input-btn-padding-y-lg:      .5rem !default;
-$input-btn-padding-x-lg:      1rem !default;
+$input-btn-padding-y-lg:      .5vmin !default;
+$input-btn-padding-x-lg:      1vmin !default;
 $input-btn-font-size-lg:      $font-size-lg !default;
 
 $input-btn-border-width:      var(--#{$prefix}border-width) !default;
@@ -860,7 +860,7 @@ $btn-active-border-tint-amount:   10% !default;
 // Forms
 
 // scss-docs-start form-text-variables
-$form-text-margin-top:                  .25rem !default;
+$form-text-margin-top:                  .25vmin !default;
 $form-text-font-size:                   $small-font-size !default;
 $form-text-font-style:                  null !default;
 $form-text-font-weight:                 null !default;
@@ -868,7 +868,7 @@ $form-text-color:                       var(--#{$prefix}secondary-color) !defaul
 // scss-docs-end form-text-variables
 
 // scss-docs-start form-label-variables
-$form-label-margin-bottom:              .5rem !default;
+$form-label-margin-bottom:              .5vmin !default;
 $form-label-font-size:                  null !default;
 $form-label-font-style:                 null !default;
 $form-label-font-weight:                null !default;
@@ -926,14 +926,14 @@ $input-height-lg:                       add($input-line-height * 1em, add($input
 
 $input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
-$form-color-width:                      3rem !default;
+$form-color-width:                      3vmin !default;
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
 $form-check-input-width:                  1em !default;
 $form-check-min-height:                   $font-size-base * $line-height-base !default;
 $form-check-padding-start:                $form-check-input-width + .5em !default;
-$form-check-margin-bottom:                .125rem !default;
+$form-check-margin-bottom:                .125vmin !default;
 $form-check-label-color:                  null !default;
 $form-check-label-cursor:                 null !default;
 $form-check-transition:                   null !default;
@@ -962,7 +962,7 @@ $form-check-input-disabled-opacity:        .5 !default;
 $form-check-label-disabled-opacity:        $form-check-input-disabled-opacity !default;
 $form-check-btn-check-disabled-opacity:    $btn-disabled-opacity !default;
 
-$form-check-inline-margin-end:    1rem !default;
+$form-check-inline-margin-end:    1vmin !default;
 // scss-docs-end form-check-variables
 
 // scss-docs-start form-switch-variables
@@ -1036,18 +1036,18 @@ $form-select-transition:          $input-transition !default;
 
 // scss-docs-start form-range-variables
 $form-range-track-width:          100% !default;
-$form-range-track-height:         .5rem !default;
+$form-range-track-height:         .5vmin !default;
 $form-range-track-cursor:         pointer !default;
 $form-range-track-bg:             var(--#{$prefix}tertiary-bg) !default;
-$form-range-track-border-radius:  1rem !default;
+$form-range-track-border-radius:  1vmin !default;
 $form-range-track-box-shadow:     $box-shadow-inset !default;
 
-$form-range-thumb-width:                   1rem !default;
+$form-range-thumb-width:                   1vmin !default;
 $form-range-thumb-height:                  $form-range-thumb-width !default;
 $form-range-thumb-bg:                      $component-active-bg !default;
 $form-range-thumb-border:                  0 !default;
-$form-range-thumb-border-radius:           1rem !default;
-$form-range-thumb-box-shadow:              0 .1rem .25rem rgba($black, .1) !default;
+$form-range-thumb-border-radius:           1vmin !default;
+$form-range-thumb-box-shadow:              0 .1vmin .25vmin rgba($black, .1) !default;
 $form-range-thumb-focus-box-shadow:        0 0 0 1px $body-bg, $input-focus-box-shadow !default;
 $form-range-thumb-focus-box-shadow-width:  $input-focus-width !default; // For focus box shadow issue in Edge
 $form-range-thumb-active-bg:               tint-color($component-active-bg, 70%) !default;
@@ -1065,9 +1065,9 @@ $form-file-button-hover-bg:       var(--#{$prefix}secondary-bg) !default;
 $form-floating-height:                  add(3.5rem, $input-height-border) !default;
 $form-floating-line-height:             1.25 !default;
 $form-floating-padding-x:               $input-padding-x !default;
-$form-floating-padding-y:               1rem !default;
-$form-floating-input-padding-t:         1.625rem !default;
-$form-floating-input-padding-b:         .625rem !default;
+$form-floating-padding-y:               1vmin !default;
+$form-floating-input-padding-t:         1.625vmin !default;
+$form-floating-input-padding-b:         .625vmin !default;
 $form-floating-label-height:            1.5em !default;
 $form-floating-label-opacity:           .65 !default;
 $form-floating-label-transform:         scale(.85) translateY(-.5rem) translateX(.15rem) !default;
@@ -1150,8 +1150,8 @@ $zindex-levels: (
 // Navs
 
 // scss-docs-start nav-variables
-$nav-link-padding-y:                .5rem !default;
-$nav-link-padding-x:                1rem !default;
+$nav-link-padding-y:                .5vmin !default;
+$nav-link-padding-x:                1vmin !default;
 $nav-link-font-size:                null !default;
 $nav-link-font-weight:              null !default;
 $nav-link-color:                    var(--#{$prefix}link-color) !default;
@@ -1172,8 +1172,8 @@ $nav-pills-border-radius:           var(--#{$prefix}border-radius) !default;
 $nav-pills-link-active-color:       $component-active-color !default;
 $nav-pills-link-active-bg:          $component-active-bg !default;
 
-$nav-underline-gap:                 1rem !default;
-$nav-underline-border-width:        .125rem !default;
+$nav-underline-gap:                 1vmin !default;
+$nav-underline-border-width:        .125vmin !default;
 $nav-underline-link-active-color:   var(--#{$prefix}emphasis-color) !default;
 // scss-docs-end nav-variables
 
@@ -1184,17 +1184,17 @@ $nav-underline-link-active-color:   var(--#{$prefix}emphasis-color) !default;
 $navbar-padding-y:                  $spacer * .5 !default;
 $navbar-padding-x:                  null !default;
 
-$navbar-nav-link-padding-x:         .5rem !default;
+$navbar-nav-link-padding-x:         .5vmin !default;
 
 $navbar-brand-font-size:            $font-size-lg !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2 !default;
 $navbar-brand-height:               $navbar-brand-font-size * $line-height-base !default;
 $navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) * .5 !default;
-$navbar-brand-margin-end:           1rem !default;
+$navbar-brand-margin-end:           1vmin !default;
 
-$navbar-toggler-padding-y:          .25rem !default;
-$navbar-toggler-padding-x:          .75rem !default;
+$navbar-toggler-padding-y:          .25vmin !default;
+$navbar-toggler-padding-x:          .75vmin !default;
 $navbar-toggler-font-size:          $font-size-lg !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-focus-width:        $btn-focus-width !default;
@@ -1228,10 +1228,10 @@ $navbar-dark-brand-hover-color:     $navbar-dark-active-color !default;
 // Dropdown menu container and contents.
 
 // scss-docs-start dropdown-variables
-$dropdown-min-width:                10rem !default;
+$dropdown-min-width:                10vmin !default;
 $dropdown-padding-x:                0 !default;
-$dropdown-padding-y:                .5rem !default;
-$dropdown-spacer:                   .125rem !default;
+$dropdown-padding-y:                .5vmin !default;
+$dropdown-spacer:                   .125vmin !default;
 $dropdown-font-size:                $font-size-base !default;
 $dropdown-color:                    var(--#{$prefix}body-color) !default;
 $dropdown-bg:                       var(--#{$prefix}body-bg) !default;
@@ -1282,12 +1282,12 @@ $dropdown-dark-header-color:        $gray-500 !default;
 // Pagination
 
 // scss-docs-start pagination-variables
-$pagination-padding-y:              .375rem !default;
-$pagination-padding-x:              .75rem !default;
-$pagination-padding-y-sm:           .25rem !default;
-$pagination-padding-x-sm:           .5rem !default;
-$pagination-padding-y-lg:           .75rem !default;
-$pagination-padding-x-lg:           1.5rem !default;
+$pagination-padding-y:              .375vmin !default;
+$pagination-padding-x:              .75vmin !default;
+$pagination-padding-y-sm:           .25vmin !default;
+$pagination-padding-x-sm:           .5vmin !default;
+$pagination-padding-y-lg:           .75vmin !default;
+$pagination-padding-x-lg:           1.5vmin !default;
 
 $pagination-font-size:              $font-size-base !default;
 
@@ -1356,8 +1356,8 @@ $card-group-margin:                 $grid-gutter-width * .5 !default;
 // Accordion
 
 // scss-docs-start accordion-variables
-$accordion-padding-y:                     1rem !default;
-$accordion-padding-x:                     1.25rem !default;
+$accordion-padding-y:                     1vmin !default;
+$accordion-padding-x:                     1.25vmin !default;
 $accordion-color:                         var(--#{$prefix}body-color) !default;
 $accordion-bg:                            var(--#{$prefix}body-bg) !default;
 $accordion-border-width:                  var(--#{$prefix}border-width) !default;
@@ -1379,7 +1379,7 @@ $accordion-button-active-color:           var(--#{$prefix}primary-text-emphasis)
 $accordion-button-focus-border-color:     $input-focus-border-color !default;
 $accordion-button-focus-box-shadow:       $btn-focus-box-shadow !default;
 
-$accordion-icon-width:                    1.25rem !default;
+$accordion-icon-width:                    1.25vmin !default;
 $accordion-icon-color:                    $body-color !default;
 $accordion-icon-active-color:             $primary-text-emphasis !default;
 $accordion-icon-transition:               transform .2s ease-in-out !default;
@@ -1402,8 +1402,8 @@ $tooltip-padding-y:                 $spacer * .25 !default;
 $tooltip-padding-x:                 $spacer * .5 !default;
 $tooltip-margin:                    null !default; // TODO: remove this in v6
 
-$tooltip-arrow-width:               .8rem !default;
-$tooltip-arrow-height:              .4rem !default;
+$tooltip-arrow-width:               .8vmin !default;
+$tooltip-arrow-height:              .4vmin !default;
 // fusv-disable
 $tooltip-arrow-color:               null !default; // Deprecated in Bootstrap 5.2.0 for CSS variables
 // fusv-enable
@@ -1435,15 +1435,15 @@ $popover-box-shadow:                $box-shadow !default;
 $popover-header-font-size:          $font-size-base !default;
 $popover-header-bg:                 var(--#{$prefix}secondary-bg) !default;
 $popover-header-color:              $headings-color !default;
-$popover-header-padding-y:          .5rem !default;
+$popover-header-padding-y:          .5vmin !default;
 $popover-header-padding-x:          $spacer !default;
 
 $popover-body-color:                var(--#{$prefix}body-color) !default;
 $popover-body-padding-y:            $spacer !default;
 $popover-body-padding-x:            $spacer !default;
 
-$popover-arrow-width:               1rem !default;
-$popover-arrow-height:              .5rem !default;
+$popover-arrow-width:               1vmin !default;
+$popover-arrow-height:              .5vmin !default;
 // scss-docs-end popover-variables
 
 // fusv-disable
@@ -1457,9 +1457,9 @@ $popover-arrow-outer-color:         var(--#{$prefix}border-color-translucent) !d
 
 // scss-docs-start toast-variables
 $toast-max-width:                   350px !default;
-$toast-padding-x:                   .75rem !default;
-$toast-padding-y:                   .5rem !default;
-$toast-font-size:                   .875rem !default;
+$toast-padding-x:                   .75vmin !default;
+$toast-padding-y:                   .5vmin !default;
+$toast-font-size:                   .875vmin !default;
 $toast-color:                       null !default;
 $toast-background-color:            rgba(var(--#{$prefix}body-bg-rgb), .85) !default;
 $toast-border-width:                var(--#{$prefix}border-width) !default;
@@ -1491,10 +1491,10 @@ $badge-border-radius:               var(--#{$prefix}border-radius) !default;
 // scss-docs-start modal-variables
 $modal-inner-padding:               $spacer !default;
 
-$modal-footer-margin-between:       .5rem !default;
+$modal-footer-margin-between:       .5vmin !default;
 
-$modal-dialog-margin:               .5rem !default;
-$modal-dialog-margin-y-sm-up:       1.75rem !default;
+$modal-dialog-margin:               .5vmin !default;
+$modal-dialog-margin-y-sm-up:       1.75vmin !default;
 
 $modal-title-line-height:           $line-height-base !default;
 
@@ -1539,7 +1539,7 @@ $modal-scale-transform:             scale(1.02) !default;
 // scss-docs-start alert-variables
 $alert-padding-y:               $spacer !default;
 $alert-padding-x:               $spacer !default;
-$alert-margin-bottom:           1rem !default;
+$alert-margin-bottom:           1vmin !default;
 $alert-border-radius:           var(--#{$prefix}border-radius) !default;
 $alert-link-font-weight:        $font-weight-bold !default;
 $alert-border-width:            var(--#{$prefix}border-width) !default;
@@ -1558,7 +1558,7 @@ $alert-color-scale:             40% !default; // Deprecated in v5.2.0, to be rem
 // Progress bars
 
 // scss-docs-start progress-variables
-$progress-height:                   1rem !default;
+$progress-height:                   1vmin !default;
 $progress-font-size:                $font-size-base * .75 !default;
 $progress-bg:                       var(--#{$prefix}secondary-bg) !default;
 $progress-border-radius:            var(--#{$prefix}border-radius) !default;
@@ -1605,7 +1605,7 @@ $list-group-action-active-bg:       var(--#{$prefix}secondary-bg) !default;
 // Image thumbnails
 
 // scss-docs-start thumbnail-variables
-$thumbnail-padding:                 .25rem !default;
+$thumbnail-padding:                 .25vmin !default;
 $thumbnail-bg:                      var(--#{$prefix}body-bg) !default;
 $thumbnail-border-width:            var(--#{$prefix}border-width) !default;
 $thumbnail-border-color:            var(--#{$prefix}border-color) !default;
@@ -1628,8 +1628,8 @@ $figure-caption-color:              var(--#{$prefix}secondary-color) !default;
 $breadcrumb-font-size:              null !default;
 $breadcrumb-padding-y:              0 !default;
 $breadcrumb-padding-x:              0 !default;
-$breadcrumb-item-padding-x:         .5rem !default;
-$breadcrumb-margin-bottom:          1rem !default;
+$breadcrumb-item-padding-x:         .5vmin !default;
+$breadcrumb-margin-bottom:          1vmin !default;
 $breadcrumb-bg:                     null !default;
 $breadcrumb-divider-color:          var(--#{$prefix}secondary-color) !default;
 $breadcrumb-active-color:           var(--#{$prefix}secondary-color) !default;
@@ -1658,10 +1658,10 @@ $carousel-indicator-transition:      opacity .6s ease !default;
 
 $carousel-caption-width:             70% !default;
 $carousel-caption-color:             $white !default;
-$carousel-caption-padding-y:         1.25rem !default;
-$carousel-caption-spacer:            1.25rem !default;
+$carousel-caption-padding-y:         1.25vmin !default;
+$carousel-caption-spacer:            1.25vmin !default;
 
-$carousel-control-icon-width:        2rem !default;
+$carousel-control-icon-width:        2vmin !default;
 
 $carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") !default;
 $carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !default;
@@ -1680,13 +1680,13 @@ $carousel-dark-control-icon-filter:  invert(1) grayscale(100) !default;
 // Spinners
 
 // scss-docs-start spinner-variables
-$spinner-width:           2rem !default;
+$spinner-width:           2vmin !default;
 $spinner-height:          $spinner-width !default;
 $spinner-vertical-align:  -.125em !default;
 $spinner-border-width:    .25em !default;
 $spinner-animation-speed: .75s !default;
 
-$spinner-width-sm:        1rem !default;
+$spinner-width-sm:        1vmin !default;
 $spinner-height-sm:       $spinner-width-sm !default;
 $spinner-border-width-sm: .2em !default;
 // scss-docs-end spinner-variables
@@ -1733,8 +1733,8 @@ $offcanvas-backdrop-opacity:        $modal-backdrop-opacity !default;
 $code-font-size:                    $small-font-size !default;
 $code-color:                        $pink !default;
 
-$kbd-padding-y:                     .1875rem !default;
-$kbd-padding-x:                     .375rem !default;
+$kbd-padding-y:                     .1875vmin !default;
+$kbd-padding-x:                     .375vmin !default;
 $kbd-font-size:                     $code-font-size !default;
 $kbd-color:                         var(--#{$prefix}body-bg) !default;
 $kbd-bg:                            var(--#{$prefix}body-color) !default;
